@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quotes.dart';
+import 'quoteCard.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -21,34 +22,9 @@ class _quoteListState extends State<quoteList> {
     Quotes(author: "Felix", text: "Skrata du, flora du...mannnneeee")
   ]; //research map() function
 
-  Widget quoteTemp(quote) {
-    return Card(
-      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              quote.text,
-              style: TextStyle(
-                fontSize: 18.0,
-                color: Colors.grey[600],
-              ),
-            ),
-            SizedBox(height: 6.0),
-            Text(
-              quote.author,
-              style: TextStyle(
-                fontSize: 14.0,
-                color: Colors.grey[800],
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
+  // Widget quoteTemp(quote) {
+  //   return quoteCard(quote: quote);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +36,7 @@ class _quoteListState extends State<quoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => quoteTemp(quote)).toList(),
+        children: quotes.map((quote) => quoteCard(quote: quote)).toList(),
       ),
     );
   }
