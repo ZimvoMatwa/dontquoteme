@@ -19,8 +19,8 @@ class _quoteListState extends State<quoteList> {
   List<Quotes> quotes = [
     Quotes(author: "Pewdiepie", text: "Be a pizza, everyone loves pizza"),
     Quotes(author: "Gloria Borger", text: "pew pew pew"),
-    Quotes(author: "Felix", text: "Skrata du, flora du...mannnneeee")
-  ]; //research map() function
+    Quotes(author: "Felix", text: "Skrata du, flora du...mannnneeee!!!")
+  ]; //study map() function
 
   // Widget quoteTemp(quote) {
   //   return quoteCard(quote: quote);
